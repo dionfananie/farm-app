@@ -1,6 +1,9 @@
 import { defineConfig } from "@farmfe/core";
 
 export default defineConfig({
+  server: {
+    port: 3000,
+  },
   compilation: {
     input: {
       index: "./src/index-server.tsx",
@@ -15,6 +18,7 @@ export default defineConfig({
     assets: {
       mode: "browser",
     },
+
     // external: [...builtinModules.map((m) => `^${m}$`)],
     css: {
       prefixer: {
