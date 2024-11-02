@@ -10,6 +10,7 @@ function serverMiddleware(server: Server) {
         next: () => any
       ) => {
         await next();
+        console.log("mode: ", process.env.NODE_ENV);
 
         // handle index.html or SPA fallback
         if (ctx.path === "/" || ctx.status === 404) {
@@ -36,7 +37,7 @@ function serverMiddleware(server: Server) {
           ctx.status = 200;
         }
 
-        console.log("ctx.path outer", ctx.path);
+        console.log("ssr updated", ctx.path);
       }
     );
 }
