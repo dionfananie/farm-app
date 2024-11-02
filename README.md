@@ -1,37 +1,28 @@
-# Farm + React
+# Farm React SSR Example
 
-This template should help you start developing using React and TypeScript in Farm.
+React + React Router + SSR.
 
-## Setup
+## Start
 
-Install the dependencies:
-
-```bash
-pnpm install
+```sh
+bun start; # start the client dev server
+bun start:server; # compile and watch the server procution in development mode
 ```
 
-## Get Started
+Then visit `http://localhost:9000`.
 
-Start the dev server:
+## Build For Production
 
-```bash
-pnpm start
+Build for both client and server.
+
+```sh
+npm run build && npm run build:server
 ```
 
-Build the app for production:
+then launch the production server:
 
-```bash
-pnpm build
+```sh
+NODE_ENV=production node server.js
 ```
 
-Preview the Production build product:
-
-```bash
-pnpm preview
-```
-
-Clear persistent cache local files
-
-```bash
-pnpm clean
-```
+Visit `http://localhost:3000`
