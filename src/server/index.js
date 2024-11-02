@@ -3,7 +3,7 @@ const fsp = require("fs/promises");
 const Fastify = require("fastify");
 
 function resolve(p) {
-  return path.resolve(__dirname, p);
+  return path.resolve(p);
 }
 
 async function createServer() {
@@ -29,9 +29,12 @@ async function createServer() {
       const renderedHtml = render(url);
       console.log(renderedHtml);
 
-      const html = template.replace("{app-html-to-replace}", renderedHtml);
-      console.log(template.includes("{app-html-to-replace}"));
-      console.log(html.includes("{app-html-to-replace}"));
+      const html = template.replace(
+        "<!-- app-html-to-replace -->",
+        renderedHtml
+      );
+      console.log(template.includes("<!-- app-html-to-replace -->"));
+      console.log(html.includes("<!-- app-html-to-replace -->"));
 
       reply.type("text/html").send(html);
     } catch (error) {

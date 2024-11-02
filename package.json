@@ -6,7 +6,7 @@
     "start:server": "farm watch --config farm.config.server.ts",
     "dev": "farm start",
     "watch": "farm watch --config farm.config.server.ts",
-    "preview": "node server.js",
+    "preview": "node src/server",
     "build": "bun build:server && farm build",
     "build:server": "farm build --config farm.config.server.ts",
     "clean": "farm clean"
