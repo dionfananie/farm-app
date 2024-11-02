@@ -2,6 +2,10 @@
 
 React + React Router + SSR.
 
+## Tech Stack
+
+**Server:** Node, Fastify, Typescript
+
 ## Start
 
 ```sh
