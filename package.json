@@ -14,9 +14,9 @@
   "dependencies": {
     "@fastify/static": "^8.0.2",
     "@loadable/component": "^5.16.4",
+    "@vercel/node": "^3.2.24",
     "express": "^4.18.2",
     "fastify": "^5.1.0",
-    "now": "^21.0.1",
     "react": "18",
     "react-dom": "18",
     "react-router-dom": "^6.27.0"
