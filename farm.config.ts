@@ -1,7 +1,6 @@
-import path from "path";
 import { defineConfig } from "@farmfe/core";
 import { middleware } from "./src/server/middleware";
-
+import farmPluginPostcss from "@farmfe/js-plugin-postcss";
 export default defineConfig({
   compilation: {
     input: {
@@ -16,5 +15,5 @@ export default defineConfig({
     cors: true,
     middlewares: middleware,
   },
-  plugins: ["@farmfe/plugin-react", "@farmfe/plugin-sass"],
+  plugins: ["@farmfe/plugin-react", "@farmfe/plugin-sass", farmPluginPostcss()],
 });

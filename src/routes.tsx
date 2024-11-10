@@ -1,12 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layouts";
 import About from "./pages/About";
+import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-import loadable from "@loadable/component";
-const Home = loadable(
-  () => import(/* webpackChunkName: "home-chunk" */ "./pages/Home"),
-  { ssr: true }
-);
 
 const RoutesApp = () => {
   return (

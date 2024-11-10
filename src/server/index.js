@@ -36,7 +36,8 @@ async function createServer() {
       console.log(template.includes("<!-- app-html-to-replace -->"));
       console.log(html.includes("<!-- app-html-to-replace -->"));
 
-      reply.type("text/html").send(html);
+      reply.header("Content-Type", "text/html");
+      reply.status(200).send(html);
     } catch (error) {
       console.error(error.stack);
       reply.status(500).send(error.stack);

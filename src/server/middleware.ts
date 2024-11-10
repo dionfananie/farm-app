@@ -10,6 +10,7 @@ function serverMiddleware(server: Server) {
         next: () => any
       ) => {
         await next();
+
         console.log("mode: ", process.env.NODE_ENV);
 
         // handle index.html or SPA fallback
